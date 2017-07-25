@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         load("Name");
         load("Psw");
         load("check");
+        //This is something changes!!!!! To commit!
         //checkbox逻辑
         saveUser.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
