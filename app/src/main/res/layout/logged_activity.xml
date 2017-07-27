@@ -9,7 +9,7 @@
     tools:context="ctsverifier.test.com.newtest.LoggedActivity"
     >
     <TextView
-
+        android:id="@+id/hello_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="你已成功登录！"/>

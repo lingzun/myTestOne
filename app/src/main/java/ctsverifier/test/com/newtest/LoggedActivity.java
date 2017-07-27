@@ -2,6 +2,7 @@ package ctsverifier.test.com.newtest;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,18 +11,24 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoggedActivity extends AppCompatActivity implements View.OnClickListener {
     private Button openUri, permissionTest, permissionTest1;
+    private TextView helloWord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logged_activity);
+        SharedPreferences preferences=getSharedPreferences("data_save",MODE_PRIVATE);
+        helloWord= (TextView) findViewById(R.id.hello_word);
         openUri = (Button) findViewById(R.id.openUrl);
         permissionTest = (Button) findViewById(R.id.permission_btn);
         permissionTest1 = (Button) findViewById(R.id.permission_btn1);
+        String helloWords=preferences.getString("UserName","");
+        helloWord.setText(helloWords+" ,欢迎登陆！ ");
         openUri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -21,26 +21,30 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="15dp"
         android:hint="请输入用户名"/>
-    <EditText
-        android:id="@+id/main_psw_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="15dp"
-        android:inputType="textPassword"
-        android:hint="请输入密码"/>
+
+        <EditText
+            android:id="@+id/main_psw_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:inputType="textPassword"
+            android:hint="请输入密码"/>
+
+
+
+
     <LinearLayout
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <CheckBox
-            android:id="@+id/main_save_userpsw"
+            android:id="@+id/remember_userpsw"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:text="记住用户名密码"/>
+            android:text="save"/>
         <Button
             android:id="@+id/main_registe_btn"
             android:textAllCaps="false"
@@ -55,6 +59,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="登录"/>
+        <Button
+            android:id="@+id/psw_visible_btn"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
     </LinearLayout>
 
 
